@@ -4,4 +4,4 @@ select
     first_name,
     last_name
 
-from `irn-73707-tra-ff.dbt_setup_a054975.customers_raw`
+from {{ source('dbt_setup_a054975','customers') }}

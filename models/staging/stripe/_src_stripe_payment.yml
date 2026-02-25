@@ -1,0 +1,16 @@
+sources:
+  - name: stripe
+    database: irn-73707-tra-ff
+    schema: dbt_setup_a054975
+    tables:
+      - name: payment
+        identifier: payment_raw
+        config:
+          freshness:
+            warn_after:
+              count: 5
+              period: day
+            error_after:
+              count: 7
+              period: day
+          loaded_at_field: _batched_at

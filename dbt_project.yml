@@ -21,6 +21,9 @@ snapshot-paths: ["snapshots"]
 clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
+  - "dbt_external_packages"
+
+packages-install-path: "dbt_external_packages"
 
 
 # Configuring models
